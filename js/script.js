@@ -1,5 +1,22 @@
 // html, css, js 로딩완료
 $(document).ready(function () {
+      const modal = $(".modal");
+      const modalClose = $(".modal-close");
+      const modalWrap = $(".modal-wrap");
+      modal.click(function () {
+        modal.fadeOut(500);
+        $("body").css("overflow-x", "hidden");
+        $("body").css("overflow-y", "auto");
+      });
+      modalClose.click(function () {
+        modal.fadeOut(500);
+        $("body").css("overflow-x", "hidden");
+        $("body").css("overflow-y", "auto");
+      });
+      modalWrap.click(function (event) {
+        event.stopPropagation();
+      });
+
   // 메인 메뉴 기능
   let header = $('.header');
   let header_top = $('.header-top');
